@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+
+  
+ /* reset */
+html {font-size:10px;overflow-y:scroll}
+body, input, button, textarea, select {font-family:"Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;font-size:1.4rem}
+body {margin:0;padding:0;height:auto; background-color: #fff; color:#222222;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html, h1, h2, h3, h4, h5, h6, form, fieldset, img, input, button, select {margin:0;padding:0}
+ul,li,ol,dl,dd,dt {list-style:none;padding:0;margin:0}
+label, input, button, select, img {vertical-align:middle}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;overflow:hidden}
+button {border:0;background:transparent;cursor:pointer}
+input[type="submit"]{cursor:pointer}
+p {margin:0;padding:0;word-break:break-all}
+hr {display:none}
+pre {overflow-x:scroll}
+fieldset {border:0}
+a, a:link {color:#000;text-decoration:none}
+a:hover {text-decoration:underline;color:#4d0585}
+a:focus, a:active {color:#000;text-decoration:none}
+input:-webkit-autofill {-webkit-box-shadow:0 0 0px 1000px #ffffff75 inset;}
+input, select, textarea {background: #fff; color: #222;}
+
+/*
+.m_view {display:none}
+
+#con_lf video{max-width:100%;height:auto}
+video[poster]{object-fit:fill}
+
+.mbskin .required, .mbskin textarea.required {}
+
+
+iframe#hiddenframe {display:none;width:0;height:0}
+
+.pad {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+
+
+.co-ico {}
+.co-ico-small {margin:0 0 0 2px}
+
+.sir_mb_icon {display:inline-block;width:22px;height:22px;background:url('../img/common/icon.png') -410px 0;vertical-align:middle}
+ */
+
+
+
+
+/******* 메인섹션 layout*******/
+/* #wrapper {padding:0 0 20px;width:100%}
+#wrapper.wrapper-pad {padding:20px 0} */
+
+.container {margin:0 auto ;padding:20px 0px;width:1050px;}
+.container:after {display:block;visibility:hidden;clear:both;content:""}
+#wrapper .layout{display: flex;flex-direction: column;}
+/*최신글*/
+#con_lf {width:730px;float:left;margin-right:20px;position:relative;clear:both}
+#con_lf .new_con {margin:0 20px 0 0; padding-bottom:38px; width:350px; font-size:1.3rem; float:left;}
+#con_lf .new_con h2 {position:relative}
+#con_lf .new_con h2, #con_lf .new_con_cm h2 {padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid #d6dee4; color:#333; font-size:1.55rem;}
+#con_lf .new_con h2 a, #con_lf .new_con_cm h2 a {text-decoration:none;color:#000; display: block;} 
+#con_lf .new_con h2 a:hover, #con_lf .new_con_cm h2 a:hover {color:#4d0585}
+#con_lf .new_con_ri {margin-right:0px}
+#con_lf .new_con ul li {overflow:hidden;margin:0;padding:0}
+#con_lf .new_con ul li a {width:355px;line-height:23px;color:#222}
+#con_lf .new_con ul li a:hover .new_ti {text-decoration:underline;color:#4d0585}
+#con_lf .new_con ul li a span {display:inline-block;float:left;height:23px}
+#con_lf .new_con ul li a span.new_ti {padding-right:10px; width:280px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap}
+#con_lf .new_con ul li a span.new_rp {width:15px;color:#4d0585;text-align:center;width:20px}
+#con_lf .new_con ul li a span.new_dt {width:15px;text-align:right;width:35px}
+
+
+#con_lf .new_con_cm {margin-bottom:25px; width:730px; overflow:hidden;}
+#con_lf .new_con_cm li {float:left;margin-left:30px;margin-bottom:20px;font-size:1.3rem}
+#con_lf .new_con_cm li:first-child,#con_lf .new_con_cm li.ltimg1,#con_lf .new_con_cm li.ltimg5 {margin-left:0}
+#con_lf .new_con_cm li a {color:#484848}
+#con_lf .new_con_cm li a:hover {color:#4d0585}
+#con_lf .new_con_cm li .cmall_img a img {border:1px solid #d6dee4;}
+#con_lf .new_con_cm li .cmall_tit {width:157px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;margin-top:8px;position:relative}
+#con_lf .new_con_cm li .new_rp {color:#4d0585;padding:0 0 0 8px}
+
+
+
+.pg_tit {margin:0 0 10px;font-size:1.4rem;font-weight:bold}
+#lbo_head {
+    margin: 10px 0;
+    width: 100%;
+}
+
+#lbo_sch {
+    display: inline-block;
+}
+#lbo_head select {
+    float: left;
+    margin-right: 5px;
+    height: 26px;
+    padding-left: 5px;
+    border: 1px solid #c2c2c2;
+}#lbo_head .sir_inp {
+    padding: 1px;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #c2c2c2;
+    float: left;
+}#lbo_head #sch_submit {
+    float: left;
+    width: 36px;
+    height: 26px;
+    background: #606060;
+    border: 0;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+}
+
+
+#head_bwrp {
+    float: right;
+}
+
+#head_bwrp a{
+    border: 1px solid #c2c2c2;
+    color: #222222;
+    background: #fff;
+    display: inline-block;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+/* 메인페이지 사진게시판 미리보기 */
+.pic_board{width: 730px;}
+.subidx_img6{ width:730px; display: flex; flex-direction: row; justify-content:space-between;}
+#pic_board h2 {width:730px; padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid #d6dee4; color:#333; font-size:1.55rem;}
+#pic_board h2 a {text-decoration:none;color:#000; display: block;} 
+
+
+
+/* 글리스트 */
+/* 리스트 헤더 */
+#sir_lbo .lbo_li {
+    padding: 0;
+    border-right: 0;
+    border-left: 0;
+    position: relative;
+}
+#sir_lbo .lbo_legend, #sir_lbo .lbo_legend:hover {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d9e1e5;
+    background: #e0e0e0;
+    text-align: center;
+    letter-spacing: -0.1em;
+    border-top: 1px solid #b80404;
+}
+
+
+/* 리스트 body */
+.gall_list {
+    width: 100%;
+    border-bottom: 1px solid #b80404;
+}
+th {
+    height: 37px;
+    border-top: 1px solid #b80404;
+    background-color: #ececec;
+    vertical-align: middle;
+    text-align: center;
+    color: #333;
+}
+td {
+    padding: 2px 4px;
+    border-top: 1px solid #eee;
+    vertical-align: middle;
+    text-align: center;
+    color: #333;
+}
+.gall_list td {
+    padding: 0px 4px;height: 25px;
+}
+
+
+
+.gall_list .gall_num{
+    font-family: tahoma,sans-serif;
+    font-size: 11px;
+    padding-top: 1px;
+}
+
+.gall_tit {
+    position: relative;
+    text-align: left;
+    font-size: 13px;
+}
+.gall_tit a {
+    display: inline-block;
+    max-width: 82%;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 1px 0px 3px 8px;
+    line-height: 100%;
+}
+
+
+
+/* view페이지 */
+/* 글 조회 */
+.main{width: 1160px; margin: 20px auto 0;}
+.page_head {
+    height: 34px;
+    padding-bottom: 10px;
+    border-bottom:2px solid #d6dee4; 
+    /* padding-bottom:10px; margin-bottom:10px; color:#333; font-size:1.55rem; */
+}
+
+.fl {
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.page_head h2 {
+    font-size: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: -1px;
+    margin: 2px 8px 0 3px;
+    max-width: 416px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+}
+.page_head h2 a {
+    color: #b80404;
+}
+
+.pageview_head{
+    display: flex;flex-direction: column;
+    margin: 16px 0 29px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #eee;
+}
+.pageview_head .title {
+    padding: 0 2px;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.pageview_head .writer {
+    padding: 0 2px;
+    /* position: relative; */
+    font-size: 13px;
+}
+
+.pageview_head .writer .nickname {
+
+    border-right: 1px solid #c2c2c2;
+}
+.pageview_contents > .inner {
+    margin: 50px 0 100px;
+}
+
+/* 좋아요 싫어요 버튼 */
+.btn_recommend_box{
+    width: 288px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 19px;
+    /* border: 1px solid #c4c4c4; */
+    border-radius: 2px;
+    background: #fff;
+    font-family: -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",arial,Dotum,돋움,sans-serif;
+    /* clear: both; */
+}
+
+.btn_recommend_box .inner_box{
+    display: flex;flex-direction: row;justify-content: space-around;
+}
+
+.btn_recommend_box .inner_box .inner{
+    overflow: hidden;
+    width: 139px;
+    text-align: center;
+}
+
+.btn_recommend_box .inner_box .inner span{
+    font: 16px bold #d31900;
+}
+/* .btn_recommend_box .inner_box .inner i{
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+} */

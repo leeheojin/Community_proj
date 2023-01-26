@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/basic.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<script src="https://kit.fontawesome.com/e36bdcb628.js" crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+	<div id="hd_bn" class="">
+		<div class="inner">
+
+			<div class="links">
+				<a href="">버그신고</a>
+				<a href="">새글</a>
+				<a href="">인기글</a>
+				<a href="">자유게시판</a>
+			</div>
+
+		</div>
+	</div>
+	<!-- 상단 시작 { -->
+	<div id="hd">
+		<h1 id="hd_h1">커뮤니티</h1>
+		<div id="hd_wrapper">
+			<!-- 헤더 로고 -->
+			<div id="hd_logo" class="header-logo">
+				<a href="/index.html">
+					<img src="./img/aaa.png" width="60" height="55">
+					<!-- <img src="./img/aaa.png"  class="logo"> -->
+				</a>
+			</div>
+			<!-- 헤더 검색 -->
+			<div id="hd_sch" class="">
+				<form name="frmsearch1" action="" onsubmit="return fsearchbox_submit(this);">
+					<!-- <label for="hd_sch_q" class="sound_only">검색어 <strong>필수</strong></label> -->
+					<input type="text" name="q" value="" id="hd_sch_q" required>
+					<button type="submit" id="hd_sch_submit">
+						<i class="fa fa-search"></i>
+					</button>
+				</form>
+				<!-- 검색 스크립트 -->
+				<script>
+					function fsearchbox_submit(f) {
+						if (f.q.value.length < 1) {
+							alert("검색어를 입력해 주십시오.");
+							f.q.focus();
+							return false;
+						}
+						return true;
+					}
+				</script>
+			</div>
+		</div>
+
+
+		<div id="gnb">
+			<div class="inner">
+
+				<div class="item">
+					<button type="button" class="all"><i class="fa fa-bars"></i> 전체보기</button>
+					<div id="gnb_all">
+						<div class="ico-a">
+							<a href="" class="a">최신글</a>
+							<a href="" class="a">매뉴얼</a>
+							<a href="" class="a">FAQ</a>
+						</div>
+						<ul class="sublist comm">
+							<li class="title">커뮤니티</li>
+							<li><a href=""">자유게시판</a></li>
+							<li><a href="">유머게시판</a></li>
+						</ul>
+						
+					</div>
+				</div>
+
+				<div class="item comm">
+					<a href="" class="gnb-a">커뮤니티</a>
+					<div class="item-sub">
+
+						<div class="col">
+							<div class="title"><a href="">커뮤니티</a></div>
+							<ul>
+								<li><a href="">자유게시판</a></li>
+								<li><a href="">유머게시판</a></li>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        $(function () {
+            $(".inner .item").hover(function () {
+                $(this).children(".item-sub").show();
+            }, function () {
+                $(this).children(".item-sub").hide();
+            });
+
+        });
+    </script>
+	<!-- } 상단 끝 -->
+	
+	<div class="container">
+		<div id="con_lf">
+			<h1 class="pg_tit">자유게시판</h1>
+
+			<div id="sir_lbo" class="sir_lbo">
+				<div id="lbo_head">
+					<form name="fsearch" id="lbo_sch" method="get" action="" autocomplete="off">
+						<!-- 추후작업 : search 기능-->
+						<input type="hidden" name="sca" value="">
+						<fieldset>
+							<select name="sfl">
+								<option value="wr_subject||wr_content">제목+내용</option>
+								<option value="wr_subject">제목</option>
+							</select>
+
+							<input type="text" name="stx" value="" id="sch_stx" required="" class="sir_inp"
+								maxlength="30">
+							<button type="submit" id="sch_submit" alt="검색"><i class="fa fa-search"></i></button>
+						</fieldset>
+					</form>
+
+					<div id="head_bwrp">
+						<a href="" class="sir_b01_high">글쓰기</a><!-- 추후작업 : 새 글쓰기 페이지 -->
+					</div>
+				</div>
+
+
+
+
+
+
+				<table class="gall_list">
+					<colgroup>
+						<col style="width:7%">
+						<col>
+						<col style="width:18%">
+						<col style="width:6%">
+						<col style="width:6%">
+						<col style="width:6%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">제목</th>
+							<th scope="col">글쓴이</th>
+							<th scope="col">작성일</th>
+							<th scope="col">조회</th>
+							<th scope="col">추천</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="ub-content us-post">
+							<td class="gall_num">1280752</td>
+							<td class="gall_tit ub-word">
+								<a href="/view.html">이제 자야지
+								<span class="reply_num">[1]</span></a>
+							</td>
+							<td class="gall_writer ub-writer" data-nick="ㅇㅇ" data-uid="" data-ip="180.65"data-loc="list">
+								<span class="nickname" title="ㅇㅇ"><em>ㅇㅇ</em></span>
+							</td>
+							<td class="gall_date" title="2023-01-26 01:30:16">01:30</td>
+							<td class="gall_count">52</td>
+							<td class="gall_recommend">0</td>
+						</tr>
+						<tr class="ub-content us-post">
+							<td class="gall_num">1280752</td>
+							<td class="gall_tit ub-word">
+								<a href="/view.html">이제 자야지
+								<span class="reply_num">[1]</span></a>
+							</td>
+							<td class="gall_writer ub-writer" data-nick="ㅇㅇ" data-uid="" data-ip="180.65"data-loc="list">
+								<span class="nickname" title="ㅇㅇ"><em>ㅇㅇ</em></span>
+							</td>
+							<td class="gall_date" title="2023-01-26 01:30:16">01:30</td>
+							<td class="gall_count">52</td>
+							<td class="gall_recommend">0</td>
+						</tr>
+						<tr class="ub-content us-post">
+							<td class="gall_num">1280752</td>
+							<td class="gall_tit ub-word">
+								<a href="/view.html">이제 자야지
+								<span class="reply_num">[1]</span></a>
+							</td>
+							<td class="gall_writer ub-writer" data-nick="ㅇㅇ" data-uid="" data-ip="180.65"data-loc="list">
+								<span class="nickname" title="ㅇㅇ"><em>ㅇㅇ</em></span>
+							</td>
+							<td class="gall_date" title="2023-01-26 01:30:16">01:30</td>
+							<td class="gall_count">52</td>
+							<td class="gall_recommend">0</td>
+						</tr>
+						<tr class="ub-content us-post">
+							<td class="gall_num">1280752</td>
+							<td class="gall_tit ub-word">
+								<a href="/view.html">이제 자야지
+								<span class="reply_num">[1]</span></a>
+							</td>
+							<td class="gall_writer ub-writer" data-nick="ㅇㅇ" data-uid="" data-ip="180.65"data-loc="list">
+								<span class="nickname" title="ㅇㅇ"><em>ㅇㅇ</em></span>
+							</td>
+							<td class="gall_date" title="2023-01-26 01:30:16">01:30</td>
+							<td class="gall_count">52</td>
+							<td class="gall_recommend">0</td>
+						</tr>
+						<tr class="ub-content us-post">
+							<td class="gall_num">1280752</td>
+							<td class="gall_tit ub-word">
+								<a href="/view.html">이제 자야지
+								<span class="reply_num">[1]</span></a>
+							</td>
+							<td class="gall_writer ub-writer" data-nick="ㅇㅇ" data-uid="" data-ip="180.65"data-loc="list">
+								<span class="nickname" title="ㅇㅇ"><em>ㅇㅇ</em></span>
+							</td>
+							<td class="gall_date" title="2023-01-26 01:30:16">01:30</td>
+							<td class="gall_count">52</td>
+							<td class="gall_recommend">0</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+
+
+
+
+				<!-- <div class="sir_ulwrp sir_ul01">
+					<ul>
+						<li class="lbo_li lbo_legend lbo_legend_like">
+							<span class="li_num">번호</span>
+							<span class="li_title" style="margin:0 270px 0 50px;">제목</span>
+							<span class="li_info">
+								<span class="info_span info_nick">작성자</span>
+								<span class="info_span info_date">작성일</span>
+								<span class="info_span info_like">추천</span>
+								<span class="info_span info_hit">조회</span>
+							</span>
+						</li>
+
+						
+
+						<li class="lbo_li li_bg0 lbo_like" style="z-index:30">
+							
+							<div class="li_num">
+								191736 </div>
+								<div class="li_title" style="margin:0 270px 0 50px;">
+
+
+								<a href="" class="title_link">
+									중국 해커조직의 한국 조롱 </a>
+							</div>
+							<div class="li_info">
+								<span class="info_span info_nick"><span class="sv_wrap">
+										<a href="//sir.kr/bbs/profile.php?mb_id=google_hqng031e" class="sv_member"
+											title="마르산 자기소개" target="_blank" rel="nofollow"
+											onclick="return false;">
+											<span class="member">마르산</span></a>
+									</span></span>
+								<span class="info_span info_date"> 23:14</span>
+								<span class="info_span info_like">
+									<span class="like_good0">0</span>
+								</span>
+								<span class="info_span info_hit">15</span>
+							</div>
+						</li>
+					</ul>
+				</div> -->
+
+				<!-- 
+			<div class="boardlist">
+				<ul>
+					<li>
+						<a href="" class="list">
+							<div class="list_img">
+								<img src="https://dccdn11.dcinside.co.kr/viewimage.php?id=29bed223f6c6&no=24b0d769e1d32ca73fea85fa11d028315c2a09e47d692719f95ebfe697d5a1762bd3114a73741de238664e0d37bde42ead23ac40c55685a4f9da7b40e450&27910823"
+									alt="" style="position:relative;">
+							</div>
+							<div class="list_title">
+								<p>프랑스의 빵 평등권</p><span class="num">[504]</span>
+							</div>
+							<div class="list_info">
+								<span class="name">기타음식</span>
+								<span class="time">18:35</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="" class="list">
+							<div class="list_img">
+								<img src="https://dccdn11.dcinside.co.kr/viewimage.php?id=29bed223f6c6&no=24b0d769e1d32ca73fea85fa11d028315c2a09e47d692719f95ebfe697d5a1762bd3114a73741de238664e0d37bde42ead23ac40c55685a4f9da7b40e450&27910823"
+									alt="" style="position:relative;">
+							</div>
+							<div class="list_title">
+								<p>프랑스의 빵 평등권</p><span class="num">[504]</span>
+							</div>
+							<div class="list_info">
+								<span class="name">기타음식</span>
+								<span class="time">18:35</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="" class="list">
+							<div class="list_img">
+								<img src="https://dccdn11.dcinside.co.kr/viewimage.php?id=29bed223f6c6&no=24b0d769e1d32ca73fea85fa11d028315c2a09e47d692719f95ebfe697d5a1762bd3114a73741de238664e0d37bde42ead23ac40c55685a4f9da7b40e450&27910823"
+									alt="" style="position:relative;">
+							</div>
+							<div class="list_title">
+								<p>프랑스의 빵 평등권</p><span class="num">[504]</span>
+							</div>
+							<div class="list_info">
+								<span class="name">기타음식</span>
+								<span class="time">18:35</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div> -->
+
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>

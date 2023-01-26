@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/basic.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<script src="https://kit.fontawesome.com/e36bdcb628.js" crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="hd_bn" class="">
+		<div class="inner">
+
+			<div class="links">
+				<a href="">버그신고</a>
+				<a href="">새글</a>
+				<a href="">인기글</a>
+				<a href="">자유게시판</a>
+			</div>
+
+		</div>
+	</div>
+	<!-- 상단 시작 { -->
+	<div id="hd">
+		<h1 id="hd_h1">커뮤니티</h1>
+		<div id="hd_wrapper">
+			<!-- 헤더 로고 -->
+			<div id="hd_logo" class="header-logo">
+				<a href="/index.html">
+					<img src="./img/aaa.png" width="60" height="55">
+					<!-- <img src="./img/aaa.png"  class="logo"> -->
+				</a>
+			</div>
+			<!-- 헤더 검색 -->
+			<div id="hd_sch" class="">
+				<form name="frmsearch1" action="" onsubmit="return fsearchbox_submit(this);">
+					<input type="text" name="q" value="" id="hd_sch_q" required>
+					<button type="submit" id="hd_sch_submit">
+						<i class="fa fa-search"></i>
+					</button>
+				</form>
+				<!-- 검색 스크립트 -->
+				<script>
+					function fsearchbox_submit(f) {
+						if (f.q.value.length < 1) {
+							alert("검색어를 입력해 주십시오.");
+							f.q.focus();
+							return false;
+						}
+						return true;
+					}
+				</script>
+			</div>
+		</div>
+
+
+		<div id="gnb">
+			<div class="inner">
+
+				<div class="item">
+					<button type="button" class="all"><i class="fa fa-bars"></i> 전체보기</button>
+					<div id="gnb_all">
+						<div class="ico-a">
+							<a href="" class="a">최신글</a>
+							<a href="" class="a">매뉴얼</a>
+							<a href="" class="a">FAQ</a>
+						</div>
+						<ul class="sublist comm">
+							<li class="title">커뮤니티</li>
+							<li><a href="">자유게시판</a></li>
+							<li><a href="">유머게시판</a></li>
+						</ul>
+						
+					</div>
+				</div>
+
+				<div class="item comm">
+					<a href="" class="gnb-a">커뮤니티</a>
+					<div class="item-sub">
+
+						<div class="col">
+							<div class="title"><a href="">커뮤니티</a></div>
+							<ul>
+								<li><a href="">자유게시판</a></li>
+								<li><a href="">유머게시판</a></li>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="main">
+		<div class="page_head">
+			<div class="fl">
+				<h2><a href="./board.html">자유게시판</a></h2>
+			</div>
+		</div>
+
+
+		<div class="pageview_head">
+			<h3 class="title">
+				<span class="subject">이제 자야지</span>
+			</h3>
+			<div class="writer">
+				<div class="fl">
+					<span class="nickname">ㅇㅇ&nbsp; </span>
+					<span class="page_date">&nbsp; 2023.01.26 09:55:40</span>
+					
+				</div>
+				<div class="fr">
+					<span class="page_count">조회 18</span>
+					<span class="page_reply_num">추천 2</span>
+					<span class="page_comment">댓글 0</span>
+
+				</div>
+			</div>
+		</div>
+		<div class="pageview_contents">
+			<div class="inner">
+				<div class="writing_view_box" style="overflow:hidden;width:900px;">
+					<p>테스트 중입니다</p>
+					<p>업데이트 예정</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="btn_recommend_box">
+			<div class="inner_box">
+				<div class="inner up_num">
+					<span>6</span>
+					<button ><i class="fa-solid fa-thumbs-up"></i></button>
+				</div>
+				<div class="inner down_num">
+					<button ><i class="fa-solid fa-thumbs-down"></i></button>
+					<span>0</span>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	
+
+
+</body>
+</html>
